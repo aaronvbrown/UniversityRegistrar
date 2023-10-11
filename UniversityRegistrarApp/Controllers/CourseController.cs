@@ -9,17 +9,17 @@ namespace UniversityRegistrar.Controllers
 {
   public class CourseController : Controller
   {
-    private readonly ApplicationDbContext _context;
+    private readonly UniversityRegistrarContext _db;
 
-    public CourseController(ApplicationDbContext context)
+    public CourseController(UniversityRegistrarContext db)
     {
-      _context = context;
+      _db = db;
     }
 
-    public IActionResult Index()
+    public ActionResult Index()
     {
-      var courses = _context.Courses.ToList();
-      return View(courses);
+      List<Course> model = _db.Courses.ToList();
+      return View(model);
     }
 
   }

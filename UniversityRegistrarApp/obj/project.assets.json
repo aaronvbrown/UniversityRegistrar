@@ -782,19 +782,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/israelpadilla/.nuget/packages/": {}
+    "C:\\Users\\world\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/israelpadilla/Desktop/epicodus/UniversityRegistrar/UniversityRegistrarApp/UniversityRegistrar.csproj",
+      "projectUniqueName": "C:\\Users\\world\\Documents\\Epicodus\\UniversityRegistrar\\UniversityRegistrarApp\\UniversityRegistrar.csproj",
       "projectName": "UniversityRegistrar",
-      "projectPath": "/Users/israelpadilla/Desktop/epicodus/UniversityRegistrar/UniversityRegistrarApp/UniversityRegistrar.csproj",
-      "packagesPath": "/Users/israelpadilla/.nuget/packages/",
-      "outputPath": "/Users/israelpadilla/Desktop/epicodus/UniversityRegistrar/UniversityRegistrarApp/obj/",
+      "projectPath": "C:\\Users\\world\\Documents\\Epicodus\\UniversityRegistrar\\UniversityRegistrarApp\\UniversityRegistrar.csproj",
+      "packagesPath": "C:\\Users\\world\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\world\\Documents\\Epicodus\\UniversityRegistrar\\UniversityRegistrarApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/israelpadilla/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\world\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -852,7 +852,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.414\\RuntimeIdentifierGraph.json"
       }
     }
   }

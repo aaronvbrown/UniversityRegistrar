@@ -15,7 +15,7 @@ namespace UniversityRegistrar.Controllers
     }
     public ActionResult Index()
     {
-      List<Student> model = _db.Student.ToList();
+      List<Student> model = _db.Students.ToList();
       return View(model);
     }
 
@@ -25,20 +25,20 @@ namespace UniversityRegistrar.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(StudentController student)
+    public ActionResult Create(Student student)
     {
-      _db.Student.Add(student);
+      _db.Students.Add(student);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
 
     public ActionResult Details(int id)
     {
-      Student thisStudent = _db.Student
-        .Include( stud => stud.Courses)
-        .ThenInclude( stud => StudentController.JoinEntities)
+      Student thisStudent = _db.Students
+        .Include( stud => stud.Course)
+        .ThenInclude( stud => stud.JoinEntities)
         .ThenInclude( join => join.Tag)
-        .FirstOrDefault( course => course.CourseID == id);
+        .FirstOrDefault( course => course.CourseId == id);
       return View(thisStudent);
     }
 

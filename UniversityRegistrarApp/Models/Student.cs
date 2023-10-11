@@ -5,10 +5,11 @@ namespace UniversityRegistrar.Models
 {
   public class Student
   {
-    public int StudentID { get; set; }
+    public int StudentId { get; set; }
+    public int CourseId { get; set; }
     public string Name { get; set; }
     public DateTime EnrollmentDate { get; set; }
-    // public list<CourseTag> JoinEntities { get; }
-    // public list<DepartmentTag> JoinEntities { get; }
+    public List<CourseTag> JoinEntities { get; }
+    public Course Course { get; set; }
   }
 }
