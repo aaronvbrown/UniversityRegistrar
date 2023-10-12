@@ -10,6 +10,14 @@ namespace UniversityRegistrar.Models
     public string Name { get; set; }
     public DateTime EnrollmentDate { get; set; }
     public List<CourseTag> JoinEntities { get; }
-    public Course Course { get; set; }
+    public Course Courses { get; set; }
+    public List<Student> Students { get; set; }
+
+    public Student(string firstName)
+    {
+      Name = firstName;
+      EnrollmentDate = DateTime.Today;
+    }
   }
-}
+
+  }

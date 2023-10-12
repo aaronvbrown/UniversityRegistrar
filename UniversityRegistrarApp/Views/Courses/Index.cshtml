@@ -4,9 +4,10 @@
 
 <h1>Course Listing</h1>
 
-@* @if(@Model.Count == 0)
+@if(@Model.Count == 0)
 {
   <h3>No courses have been posted</h3>
+  <h2><a href='/courses/create'>Add a new course</a></h2>
 }
 else
 {
@@ -16,4 +17,4 @@ else
     <li>@Html.ActionLink($"{course.Name}", "Details", new { id = course.CourseId })</li>
   }
   </ul>
-} *@
+}

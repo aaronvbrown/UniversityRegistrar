@@ -35,14 +35,12 @@ namespace UniversityRegistrar.Controllers
     public ActionResult Details(int id)
     {
       Student thisStudent = _db.Students
-        .Include( stud => stud.Course)
+        .Include( stud => stud.Courses)
         .ThenInclude( stud => stud.JoinEntities)
         .ThenInclude( join => join.Tag)
         .FirstOrDefault( course => course.CourseId == id);
       return View(thisStudent);
     }
-
-
 
   }
 }

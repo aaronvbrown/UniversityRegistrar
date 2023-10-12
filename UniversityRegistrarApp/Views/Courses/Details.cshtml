@@ -1,0 +1,41 @@
+@{
+  Layout = "_Layout";
+}
+
+@model UniversityRegistrar.Models.Course
+@using UniversityRegistrar.Models
+
+<h2>Course Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+
+    @if (@Model.JoinEntities.Count == 0)
+    {
+      <h3>No students have been added to this course yet!</h3>
+    }
+    else
+    {
+      <h3>Students:</h3>
+      <ul>
+        @foreach (CourseTag join in Model.JoinEntities)
+        {
+          @* string tags = "";
+          @if (Model.JoinEntities.Count == 0)
+          {
+            tags = "This student does not have any tags.";
+          }
+          else
+          {
+            List<string> tagList = new List<string>();
+            @foreach (CourseTag join in Model.JoinEntities)
+            {
+              tagList.Add(join.Tag.Title);
+            }
+            tags = String.Join(",", tagList);
+          } *@
+          @* <li>@Model.Name| Tags: @tags</li> *@
+          <li>@Model.Name</li>
+        }
+      </ul>
+    }
+    <p>@Html.ActionLink("Back to categories", "Index")</p>

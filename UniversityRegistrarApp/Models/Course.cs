@@ -8,7 +8,7 @@ namespace UniversityRegistrar.Models
     public int TagId { get; set; }
     public int CourseNumber { get; set; }
     public string Name { get; set; }
-    public List<CourseTag> JoinEntities { get; } 
-    public Student Student { get; set; }
+    public List<CourseTag> JoinEntities { get; }
+    public Student Students { get; set; }
   }
 }

@@ -8,7 +8,7 @@ namespace UniversityRegistrar.Models
     public DbSet<Student> Students { get; set; }
     public DbSet<Course> Courses { get; set; }
     public DbSet<Tag> Tags { get; set; }
-    public DbSet<CourseTag> ItemTags { get; set; }
+    public DbSet<CourseTag> CourseTags { get; set; }
 
     public UniversityRegistrarContext(DbContextOptions options) : base(options) { }
   }
